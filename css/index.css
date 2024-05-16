@@ -21,7 +21,7 @@
 }
 
 .div-borde{
-  border: solid 2px black;
+  border: solid 3px black;
   width: 400px;
   height: 300px;
   display: grid;
