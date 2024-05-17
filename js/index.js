@@ -48,13 +48,13 @@ function comenzarJuego(){
     casillas[index].textContent = jugador;
 
      //Creamos una validación diciendo que mientras jugador tenga un valor estricto de "X"(cadena de texto).
-    if (jugador == "X"  ) {
+    if (jugador == "X" ) {
 
       //Entonces jugador tendra un nuevo valor asigando. Siendo "O"(cadena de texto).
       jugador = "O";
 
       //Al mismo tiempo mostramos en pantalla el turno del jugador.
-      informaciónJuego.textContent = "Turno jugador O";
+      informaciónJuego.textContent = "Turno jugador" + " " +  jugador;
 
       console.log(informaciónJuego);
       console.log(jugador);
@@ -65,7 +65,7 @@ function comenzarJuego(){
       // Entonces jugardor tendrá una asignación de "X".
       jugador = "X";
       //Al mismo tiempo mostramos en pantalla el turno del jugador.
-      informaciónJuego.textContent = "Turno jugador X";
+      informaciónJuego.textContent = "Turno jugador" + " " +  jugador;
       
       console.log(informaciónJuego);
       console.log(jugador);
@@ -85,7 +85,7 @@ function reiniciar() {
     //Y asignamos un nuevo valor a las posiciones de los contenedores siendo iguales a "vacio".
     casillas[index].textContent=espaciosVacios;
 
-    informaciónJuego.textContent="Turno jugador X";
+    informaciónJuego.textContent= "Turno jugador" + " " +  jugador;
     //Así mismo muestra al Usuario información de la situación.
 
 
