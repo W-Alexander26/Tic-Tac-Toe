@@ -22,47 +22,78 @@
 
 .div-borde{
   border: solid 3px black;
-  width: 400px;
-  height: 300px;
+  width: auto;
+  height: auto;
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
   grid-template-rows: 3;
   justify-content: center;
+  text-align: center;
+  font-size: 70px;
 }
 
 .div-borde1{
   border: solid 3px violet;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 
 .div-borde2{
-  border: solid 3px yellow;  
-}
+  border: solid 3px yellow;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
+}  
+
 
 .div-borde3{
   border: solid 3px red;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
+
 
 .div-borde4{
   border: solid 3px green;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 
 .div-borde5{
   border: solid 3px blue;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 
 .div-borde6{
   border: solid 3px purple;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 
 .div-borde7{
   border: solid 3px pink;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 .div-borde8{
   border: solid 3px gray;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 
 .div-borde9{
   border: solid 3px fuchsia;
+  cursor: pointer;
+  height: 100px;
+  width: 133.2px;
 }
 
 .div-Btn{
@@ -74,4 +105,11 @@
   margin-top: 25px;
   width: 70px;
   height: 20px;
+}
+
+.div-contenedorInformación{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
 }
