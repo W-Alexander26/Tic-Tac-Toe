@@ -1,4 +1,16 @@
-let casillas = document.querySelectorAll('#casillas');
+let listaHTML = document.querySelectorAll('.casillas');
+console.log(listaHTML);
+
+
+
+let casillas = [];
+for (let index = 0; index < listaHTML.length; index++) {
+  casillas.push(listaHTML[index]);
+
+  
+  
+}
+
 console.log(casillas);
 //Llama a todos los div's utilizando una misma "id". 
 
@@ -23,14 +35,14 @@ let condicionesParaGanar = [
 console.log(condicionesParaGanar);
 //Creamos una variable que muestre todas las formas de ganar utilizando el indice de las posiciones de los div´s.
 
-let espaciosVacios = " ";
-console.log(espaciosVacios);
-//Declaramos otra variable que nos va a permitir validar espacios vacios dentro del juego.
-
-
 let jugador = "X"
 console.log(jugador);
 //Creamos una variable que tiene de valor un "string".
+
+
+let pc = Math.floor(Math.random()*9);
+console.log(pc);
+//Creamos una variable que tiene la capacidad de moverse por todos los "div´s" de manera aleatoria.
 
 //Invocamos a la función.
 comenzarJuego();
@@ -48,31 +60,42 @@ function comenzarJuego(){
     casillas[index].textContent = jugador;
 
      //Creamos una validación diciendo que mientras jugador tenga un valor estricto de "X"(cadena de texto).
-    if (jugador == "X" ) {
+    if ( jugador == "X" ) {
+       let espaciosVacíos=casillas.map((espaciosDisponible)=>espaciosDisponible == " ");
+      console.log(espaciosVacíos);
 
-      //Entonces jugador tendra un nuevo valor asigando. Siendo "O"(cadena de texto).
-      jugador = "O";
 
-      //Al mismo tiempo mostramos en pantalla el turno del jugador.
-      informaciónJuego.textContent = "Turno jugador" + " " +  jugador;
-
-      console.log(informaciónJuego);
-      console.log(jugador);
-
-      //Sin. 
-    } else {
-
-      // Entonces jugardor tendrá una asignación de "X".
-      jugador = "X";
-      //Al mismo tiempo mostramos en pantalla el turno del jugador.
-      informaciónJuego.textContent = "Turno jugador" + " " +  jugador;
       
+      //Entonces creamos otra variable que tenga la capacidad de moverse de manera aleatoria dentro de los "div´s".
+       let pc2=Math.floor(Math.random()*9);
+      //Entre la 55 y la 58 tengo que validar el time set up y sobre que no me sobreescriba.
+      
+
+
+      //Ahora con la función para ejecutar una función dentro de un intervalo de tiempo, decimos que "pc2" va a moverse al hacer click y después de 1,5 seg.  
+      setTimeout(function(){
+        casillas[pc2].innerHTML="O";
+        console.log(casillas[pc2]);
+        informaciónJuego.textContent = "Turno jugador O";
+      }, 1500);
+
+      
+      //Al mismo tiempo mostramos en pantalla el turno del jugador.
+      informaciónJuego.textContent = "Turno jugador" + " " + jugador;
+
       console.log(informaciónJuego);
       console.log(jugador);
+
+      //Sino. 
+    } else  {
+      
+
+     
+
     }
   
     }); 
-  }
+  } 
 }
 
 //Creamos una función que devuelva los espacios del tablero a vacio. 
@@ -83,15 +106,15 @@ function reiniciar() {
   for (let index = 0; index < casillas.length; index++) {
 
     //Y asignamos un nuevo valor a las posiciones de los contenedores siendo iguales a "vacio".
-    casillas[index].textContent=espaciosVacios;
+    casillas[index].textContent=" ";
 
     informaciónJuego.textContent= "Turno jugador" + " " +  jugador;
     //Así mismo muestra al Usuario información de la situación.
 
-
-    
   }
   
 }
+
+
 
 
