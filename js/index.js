@@ -6,13 +6,10 @@ console.log(listaHTML);
 let casillas = [];
 for (let index = 0; index < listaHTML.length; index++) {
   casillas.push(listaHTML[index]);
-
-  
-  
 }
 
 console.log(casillas);
-//Llama a todos los div's utilizando una misma "id". 
+//Llama a todos los div's utilizando una misma "clase". 
 
 let botonReinicio = document.getElementById('btn');
 console.log(botonReinicio);
@@ -44,6 +41,8 @@ let pc = Math.floor(Math.random()*9);
 console.log(pc);
 //Creamos una variable que tiene la capacidad de moverse por todos los "div´s" de manera aleatoria.
 
+let vacio=[];
+
 //Invocamos a la función.
 comenzarJuego();
 
@@ -61,41 +60,89 @@ function comenzarJuego(){
 
      //Creamos una validación diciendo que mientras jugador tenga un valor estricto de "X"(cadena de texto).
     if ( jugador == "X" ) {
-       let espaciosVacíos=casillas.map((espaciosDisponible)=>espaciosDisponible == " ");
-      console.log(espaciosVacíos);
+      for (let index = 0; index < casillas.length; index++) {
+       if (casillas[index] == formasGanar()) {
+         informaciónJuego.textContent="Gana alguien";
 
+       }
+       
+      }
 
-      
       //Entonces creamos otra variable que tenga la capacidad de moverse de manera aleatoria dentro de los "div´s".
        let pc2=Math.floor(Math.random()*9);
-      //Entre la 55 y la 58 tengo que validar el time set up y sobre que no me sobreescriba.
+          
+      //Entre la 55 y la 58 tengo que validar sobre que no me sobreescriba.
       
-
-
-      //Ahora con la función para ejecutar una función dentro de un intervalo de tiempo, decimos que "pc2" va a moverse al hacer click y después de 1,5 seg.  
+      //Ahora con la función para ejecutar una función dentro de un intervalo de tiempo, decimos que "pc2" va a moverse al hacer click y después de 1 seg.  
       setTimeout(function(){
-        casillas[pc2].innerHTML="O";
-        console.log(casillas[pc2]);
-        informaciónJuego.textContent = "Turno jugador O";
-      }, 1500);
 
-      
+        casillas[pc2].innerHTML="O";
+
+        for (let index = 0; index <casillas.length; index++) {
+          if ( casillas == '' ) {
+            pc2 = casillas;
+            console.log(pc2);
+            
+          }
+          
+          
+        }
+
+        console.log(casillas[pc2]);
+
+        informaciónJuego.textContent = "Turno jugador O";
+
+        /*let espacioDisponibles = casillas.map(function (elemento) {
+
+          return elemento.textContent == "";
+        });
+
+
+        console.log(espacioDisponibles);
+        for (let index = 0; index < espacioDisponibles.length; index++) {
+          if (espacioDisponibles[index] == false ) {
+              espacioDisponibles[index] = pc2
+          }
+          
+        }
+       
+        // espacioDisponibles.casillas = pc2;
+
+        
+        console.log(pc2)
+
+        /*let espaciosVacíos=casillas.map((elemento)=>elemento.textContent === "");
+        return elemento*/
+ 
+        
+      }, 1000);
+
       //Al mismo tiempo mostramos en pantalla el turno del jugador.
       informaciónJuego.textContent = "Turno jugador" + " " + jugador;
 
-      console.log(informaciónJuego);
-      console.log(jugador);
-
       //Sino. 
     } else  {
-      
-
-     
-
+    
     }
   
     }); 
   } 
+}
+
+function formasGanar() {
+  for (let index = 0; index < casillas.length; index++) {
+    
+    if (casillas == condicionesParaGanar) {
+      jugador = condicionesParaGanar;
+      informaciónJuego.textContent= "Gana"+ " " + jugador;
+      
+    } else {
+      
+      pc = condicionesParaGanar;
+      informaciónJuego.textContent= "Gana" + " " + pc;
+      
+    }
+  }
 }
 
 //Creamos una función que devuelva los espacios del tablero a vacio. 
@@ -114,6 +161,8 @@ function reiniciar() {
   }
   
 }
+
+
 
 
 
