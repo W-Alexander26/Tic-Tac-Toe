@@ -33,56 +33,77 @@
   font-size: 70px;
 }
 
-.casillas{
-  cursor: pointer;
+
+.casillas1{
+  border: solid 3px violet;
   height: 100px;
   width: 133.2px;
-   
-}
-
-.div-borde1{
-  border: solid 3px violet;
+  cursor: pointer;
   
 }
 
-.div-borde2{
+.casillas2{
   border: solid 3px yellow;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }  
 
 
-.div-borde3{
+.casillas3{
   border: solid 3px red;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
 
 
-.div-borde4{
+.casillas4{
   border: solid 3px green;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
 
-.div-borde5{
+.casillas5{
   border: solid 3px blue;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
 
-.div-borde6{
+.casillas6{
   border: solid 3px purple;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
 
-.div-borde7{
+.casillas7{
   border: solid 3px pink;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
-.div-borde8{
+.casillas8{
   border: solid 3px gray;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
 
-.div-borde9{
+.casillas9{
   border: solid 3px fuchsia;
+  height: 100px;
+  width: 133.2px;
+  cursor: pointer;
   
 }
 
