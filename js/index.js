@@ -41,7 +41,7 @@ function comenzarJuego(){
       //Al mismo tiempo ejecutamos diferentes funciones que validan los espacios para determinar un gane ó empate. 
       validaGanar()
 
-      validaEmpates()
+      
 
       //Creamos una validación diciendo que mientras jugador tenga un valor estricto de "X"(cadena de texto).
       if ( jugador == "X" ) {
@@ -87,7 +87,7 @@ function comenzarJuego(){
             //Al mismo tiempo ejecutamos diferentes funciones que validan los espacios para determinar un gane ó un empate.
             validaGanar()
            
-            validaEmpates()
+            
      
            //Tambien mostramos en pantalla el turno del jugador.
             informaciónJuego.innerHTML = "Turno jugador" + " " + jugador;
@@ -111,6 +111,7 @@ function reiniciar() {
     
     //También limpiamos el contenido de "información" para que se quede en blanco cada vez que se toca el botón.
     informaciónJuego2.innerHTML = "";
+
   }
 }
 
